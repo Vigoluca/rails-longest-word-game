@@ -4,7 +4,7 @@
       <h1>Welcome to "The longest word game"</h1>
     </div>
   </div>
-  <h1>New Game</h1>
+  <h1>New Game:</h1>
   <h2><%=@letters%></h2>
   <form action="/score" method="post" data-turbo="false">
     <input type="text" name="answer" value = "<%= params[:answer] %>">
@@ -12,4 +12,13 @@
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <%= hidden_field_tag :letters, @letters %>
   </form>
+  <div class="rules">
+    <h2>Rules:</h2>
+    <p>Use the letters given to you to form an English word.
+      In order for the word to be valid, this must:</p>
+    <ul>
+      <li>Be present in the dictionary</li>
+      <li>Contain only letters given to you by the game</li>
+    </ul>
+  </div>
 </div>
