@@ -43,3 +43,10 @@ body {
   opacity: .7;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
 }
+
+.rules {
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
