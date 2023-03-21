@@ -4,7 +4,7 @@
       <h1>Welcome to "The longest word game"</h1>
     </div>
   </div>
-  <h1>New Game:</h1>
+  <h1>Available letters:</h1>
   <h2><%=@letters%></h2>
   <form action="/score" method="post" data-turbo="false">
     <input type="text" name="answer" value = "<%= params[:answer] %>">

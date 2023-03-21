@@ -1,20 +1,21 @@
 <div class= "text-center">
-<h1>Result</h1>
-<h2>The letters given to you were:</h2>
-  <h3><%= @sample %></h3>
-  <br>
-<h2>Your answer was</h2>
-  <h3><%= @answer %></h3>
-  <br>
-<% if @included %>
-  <% if @english_word %>
-    <%= "Congrats! Nice answer" %>
-  <% else %>
-    <%= "Your answer is not an English word" %>
-  <% end %>
-<% else %>
-  <%="Your answer should use only these letters: #{@sample}" %>
-<% end %>
-<br>
-<%= link_to "Play again", new_path, class:"btn btn-primary" %>
+  <div class="result">
+    <% if @included %>
+      <% if @english_word %>
+        <h1><%= "Congrats! Nice answer" %></h1>
+      <% else %>
+        <h1><%= "Your answer is not an English word" %></h1>
+      <% end %>
+    <% else %>
+      <h1><%="Your answer should use only these letters: #{@sample}" %></h1>
+    <% end %>
+  </div>
+  <div class="info">
+    <h2>The letters given to you were:</h2>
+    <h3><%= @sample %></h3>
+    <br>
+    <h2>Your answer was</h2>
+    <h3><%= @answer %></h3>
+  </div>
+  <%= link_to "Play again", new_path, class:"btn btn-primary" %>
 </div>
