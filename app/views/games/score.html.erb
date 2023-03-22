@@ -7,14 +7,15 @@
         <h1><%= "Your answer is not an English word" %></h1>
       <% end %>
     <% else %>
-      <h1><%="Your answer should use only these letters: #{@sample}" %></h1>
+      <h1>Invalid Answer</h1>
+      <h3><%="Your answer should use only these letters: #{@sample}" %></h3>
     <% end %>
   </div>
   <div class="info">
     <h2>The letters given to you were:</h2>
     <h3><%= @sample %></h3>
     <br>
-    <h2>Your answer was</h2>
+    <h2>Your answer was:</h2>
     <h3><%= @answer %></h3>
   </div>
   <%= link_to "Play again", new_path, class:"btn btn-primary" %>
